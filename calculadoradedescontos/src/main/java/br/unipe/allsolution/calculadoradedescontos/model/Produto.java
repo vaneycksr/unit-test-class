@@ -13,4 +13,7 @@ public class Produto {
     private String nome;
     private Double valor;
 
+    public Produto(Double valor) {
+        this.valor = valor;
+    }
 }
