@@ -11,7 +11,7 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ProdutoServiceTest {
+class ProdutoServiceStubTest {
 
     ProdutoService driver;
     // Stub para o Repository

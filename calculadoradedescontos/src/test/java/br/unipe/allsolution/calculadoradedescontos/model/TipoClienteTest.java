@@ -90,7 +90,7 @@ class TipoClienteTest {
 
     @Test
     @Tags({@Tag("All"),@Tag("ClienteC")})
-    void testGetFatorDescontoQuandoClienteBQuantidadeInferiorA100EntaoFatorSera080() {
+    void testGetFatorDescontoQuandoClienteCQuantidadeInferiorA100EntaoFatorSera080() {
 
         this.driver = TipoCliente.C;
 
@@ -101,7 +101,7 @@ class TipoClienteTest {
 
     @Test
     @Tags({@Tag("All"),@Tag("ClienteC")})
-    void testGetFatorDescontoQuandoClienteBQuantidadeInferiorA1000EntaoFatorSera085() {
+    void testGetFatorDescontoQuandoClienteCQuantidadeInferiorA1000EntaoFatorSera085() {
 
         this.driver = TipoCliente.C;
 
@@ -112,7 +112,7 @@ class TipoClienteTest {
 
     @Test
     @Tags({@Tag("All"),@Tag("ClienteC")})
-    void testGetFatorDescontoQuandoClienteBQuantidadeAPartirDe1000EntaoFatorSera090() {
+    void testGetFatorDescontoQuandoClienteCQuantidadeAPartirDe1000EntaoFatorSera090() {
 
         this.driver = TipoCliente.C;
 

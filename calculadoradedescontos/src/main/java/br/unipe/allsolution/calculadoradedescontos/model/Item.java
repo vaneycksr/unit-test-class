@@ -1,10 +1,8 @@
 package br.unipe.allsolution.calculadoradedescontos.model;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,5 +17,9 @@ public class Item {
     public Double getValorComDesconto(){
         return this.produto.getValor() * this.tipoCliente.getFatorDesconto(this.quantidade);
     }
+
+//    public Double getValorComDesconto(){
+//        return this.produto.getValor() * this.tipoCliente.getFatorDesconto(this.quantidade);
+//    }
 
 }
