@@ -10,7 +10,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Locale;
 import java.util.Optional;
 
 @Repository
@@ -19,14 +21,14 @@ import java.util.Optional;
 @NoArgsConstructor
 public class ItemRepositoryStub implements ItemRepository {
 
-    private Collection<Item> items;
+    private Collection<Item> itens;
     private Faker faker = new Faker();
     private Produto produto = new Produto();
 
 
     @Override
     public Collection<Item> getAll() {
-        return this.items;
+        return this.itens;
     }
 
     @Override
@@ -37,7 +39,20 @@ public class ItemRepositoryStub implements ItemRepository {
         return Optional.empty();
     }
 
+    public void criarItens(Integer quantidade, TipoCliente tipoCliente) {
+        this.itens = new ArrayList<Item>();
 
+        Produto produto = new Produto(1l,faker.commerce().productName(), faker.number().randomDouble(2, 100, 2000));
+        for(int i = 0; i < quantidade; i++) {
+            this.itens.add(new Item(
+                    i+1l,
+                    tipoCliente,
+                    this.produto,
+                    faker.number().numberBetween(1, 1001)
+            ));
+        }
+
+    }
 
 
 }
