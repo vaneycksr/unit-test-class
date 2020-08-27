@@ -22,7 +22,7 @@ import static org.mockito.Mockito.when;
 @DisplayName("Teste de Integração da Classe Item utilizando Mockito")
 @RunWith(MockitoJUnitRunner.class)
 @ExtendWith(MockitoExtension.class)
-public class ItemServiceMockTest {
+class ItemServiceMockTest {
 
     @Mock // cria uma copia dessa classe
     private ItemRepository itemRepository;
