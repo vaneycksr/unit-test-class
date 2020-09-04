@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Calculadora de Descontos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" th:href="@{/css/calculadora.css}" />
+</head>
+<body>
+    <header th:include="fragments :: header"></header>
+    <section class="container">
+        <div th:include="fragments :: jumbotron" class="jumbotron"></div>
+        <h1>Ajuda</h1>
+        <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum hendrerit tincidunt gravida. Sed volutpat dui eu commodo congue. Vivamus velit elit, egestas non lectus vel, tempor interdum est. Proin vitae faucibus magna. Nullam eu mi tristique, facilisis elit quis, porttitor tortor. Integer non sagittis neque. Ut eu rutrum dolor. Sed posuere urna lobortis, vulputate tortor non, tincidunt diam. Nulla facilisi. Etiam velit velit, tincidunt ac arcu id, pulvinar mattis nisi.</small></p>
+        <h2>Pergunta 1?</h2>
+        <p>Vivamus lectus ligula, eleifend in imperdiet quis, consequat in sapien. Curabitur et rhoncus tellus, quis rutrum dolor. Curabitur ut sodales nisl. Mauris mattis est sodales, ultrices orci id, condimentum eros. Duis egestas felis at ante vehicula, ut aliquam sem efficitur. Morbi vitae ante orci. In feugiat consequat ultricies. Phasellus at scelerisque urna. Aliquam molestie congue nisl, eget ultrices dolor laoreet eu. Phasellus egestas hendrerit ornare. In hac habitasse platea dictumst. Quisque neque eros, feugiat sed bibendum eu, rhoncus sodales tortor. Phasellus at diam quam. Donec enim eros, pharetra sed massa id, semper rutrum lorem. Mauris lectus ante, ornare eget molestie quis, fringilla sit amet eros. Sed volutpat nunc vel eros euismod, id vehicula orci tincidunt.</p>
+        <p>In ut malesuada sem. Pellentesque ex nisl, euismod sed bibendum ac, sollicitudin at nisl. Suspendisse tempus eros nec ante egestas efficitur ut quis lacus. Fusce lobortis felis non dui gravida rutrum. Pellentesque euismod at est ut commodo. Fusce eu accumsan nibh. Nullam non erat ut orci elementum vulputate. Duis vehicula congue ante, sed luctus urna pulvinar imperdiet.</p>
+        <h2>Pergunta 2?</h2>
+        <p>Vestibulum a massa vel est dapibus posuere id et tellus. Vestibulum maximus augue neque, quis faucibus metus vestibulum vel. Pellentesque eget ipsum dictum, sodales justo ac, blandit tellus. Nunc ac lectus odio. Aliquam mollis semper diam sit amet cursus. Nullam bibendum turpis nec sem ultricies bibendum. Etiam congue, eros et ultricies commodo, erat eros pretium odio, vel tincidunt nibh quam maximus sapien. Nam gravida elit et augue tristique aliquam et eget enim. Donec ut augue vel neque sodales lobortis.</p>
+        <h3>Sub-pergunta 2.1?</h3>
+        <p>Sed consequat ante mauris, sed varius metus ultrices et. Aenean efficitur vel arcu a lobortis. Integer ac commodo purus, et tincidunt justo. Suspendisse lacus odio, molestie at neque ac, vulputate condimentum risus. Vestibulum interdum, augue nec consequat semper, felis lectus condimentum nibh, eget luctus velit odio quis diam. Praesent et malesuada erat. Nullam non nulla quis nunc vestibulum vestibulum. Pellentesque eu nulla nunc. Sed est justo, suscipit in magna lobortis, convallis mattis odio. Maecenas rhoncus nisl quis viverra condimentum.</p>
+        <h3>Sub-pergunta 2.2?</h3>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur nec nulla eleifend nisi consequat gravida. Sed at elit est. In ac lorem lorem. Maecenas non magna quis magna venenatis placerat sed efficitur justo. Donec tristique vel sem vel pretium. Mauris sem urna, porttitor at malesuada nec, hendrerit nec felis. Sed rutrum aliquam ligula, non sodales urna. Suspendisse potenti. Suspendisse rhoncus tincidunt leo ut aliquet. Integer vestibulum, libero at fringilla blandit, enim tortor tincidunt ante, et scelerisque mi urna et dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer convallis sodales nisl ac luctus. Mauris egestas vitae ante ut fermentum. Vestibulum a metus felis. Nullam porta elit eget diam feugiat ultricies.</p>
+        <p>In quis augue pulvinar, ornare ex consectetur, lobortis tortor. In eu euismod velit, at ultrices magna. Vivamus egestas pretium lacus sed fringilla. Maecenas gravida vel nisi pulvinar rutrum. Praesent cursus mi diam, vitae vulputate sapien tincidunt vel. Aenean id iaculis sapien, eget venenatis arcu. Morbi interdum sem at tellus euismod, et vulputate nunc maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer eu nibh vitae turpis eleifend auctor non nec eros.</p>
+        <p>Nunc non fermentum ante. Donec diam leo, volutpat non sodales a, dignissim at purus. Ut in dui convallis, malesuada ex ac, varius neque. Cras non hendrerit enim. Morbi mollis congue odio. Ut iaculis tincidunt mauris ac iaculis. Maecenas in ante scelerisque, aliquam eros nec, ultricies mauris. Curabitur malesuada, tortor ut pellentesque molestie, odio turpis semper metus, in ornare dui diam sed mi. Vivamus et imperdiet ligula, et sollicitudin nisi. Maecenas maximus aliquam diam sed porttitor. Morbi viverra, ante vitae cursus dapibus, dui urna congue urna, sit amet rutrum nibh lorem id nisi.</p>
+        <h2>Pergunta 3?</h2>
+        <p>Fusce lacus mi, molestie a ultrices sed, malesuada non ligula. Nunc luctus sollicitudin urna, a euismod lectus rutrum sed. Nullam at diam et odio egestas fringilla. Nullam tincidunt, ligula ac vehicula ullamcorper, justo metus eleifend turpis, ut maximus elit diam ut metus. Praesent viverra suscipit quam nec volutpat. Etiam feugiat massa et suscipit fringilla. Integer at tempus nunc, quis placerat ante. Mauris non cursus orci. Fusce vitae tempus neque. Vestibulum sed augue leo. Pellentesque lobortis urna diam, vitae ultrices ligula elementum id. Cras sit amet augue augue. Maecenas at mi ut odio semper scelerisque ut suscipit magna.</p>
+        <p>Nam viverra condimentum cursus. Sed commodo lacinia erat, et dictum risus elementum in. Mauris ut posuere ligula. Proin condimentum dictum aliquam. Curabitur vitae erat tristique, venenatis nulla id, convallis orci. Integer enim sapien, egestas et dui egestas, consectetur euismod velit. Phasellus orci lacus, aliquet vitae eleifend vel, iaculis eget erat. Phasellus rhoncus, lorem nec facilisis tincidunt, quam ligula consequat tellus, et bibendum lorem ex id diam. Fusce sit amet ullamcorper eros, eget consequat lacus. Fusce at mattis erat.</p>
+        <a type="button" class="btn btn-outline-primary" th:href="@{/}">Voltar</a>
+    </section>
+    <footer th:include="fragments :: footer"></footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

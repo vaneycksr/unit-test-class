@@ -1,0 +1,96 @@
+{
+  "id": "d84fe514-6264-4dc2-8266-22e82e7fdb34",
+  "version": "2.0",
+  "name": "CalculadoraDeDescontos",
+  "url": "http://calculadora.diegoquirino.net",
+  "tests": [{
+    "id": "10475aa8-c822-4548-b6ba-0ade92d00491",
+    "name": "VerificarFatorDescontoQuandoClienteCQuantidadeAPartirDe1000EntaoFatorIgualA090",
+    "commands": [{
+      "id": "c420887a-24b4-4160-9baf-9fc74e2a3c57",
+      "comment": "Abra a página inicial",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69a3835a-76c5-475a-85dc-712ae6a95e0a",
+      "comment": "Clique na opção \"Calcular Desconto\"",
+      "command": "click",
+      "target": "id=welcome.button.calculardesconto",
+      "targets": [
+        ["id=welcome.button.calculardesconto", "id"],
+        ["css=#welcome\\.button\\.calculardesconto", "css:finder"],
+        ["xpath=(//a[contains(text(),'Calcular Desconto')])[2]", "xpath:link"],
+        ["xpath=//a[@id='welcome.button.calculardesconto']", "xpath:attributes"],
+        ["xpath=(//a[contains(@href, 'index.php?p=listarProdutos')])[3]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "087a9187-0356-47ae-9fb8-6968376aaf6d",
+      "comment": "Selecione o primeiro produto da lista",
+      "command": "click",
+      "target": "css=tr:nth-child(1) .btn-primary > .glyphicon",
+      "targets": [
+        ["css=tr:nth-child(1) .btn-primary > .glyphicon", "css:finder"],
+        ["xpath=//span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9aa7fe7-9253-42a5-b1d9-d19cdb1f040e",
+      "comment": "Selecione o Tipo de Cliente \"C\"",
+      "command": "select",
+      "target": "id=tipoCliente",
+      "targets": [],
+      "value": "label=C"
+    }, {
+      "id": "23628c4b-29f7-452d-b918-4f5927cb2606",
+      "comment": "Informe a Quantidade 1000",
+      "command": "type",
+      "target": "id=quantidade",
+      "targets": [
+        ["id=quantidade", "id"],
+        ["name=quantidade", "name"],
+        ["css=#quantidade", "css:finder"],
+        ["xpath=//input[@id='quantidade']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1000"
+    }, {
+      "id": "63528247-1780-42b8-8654-065146382ab3",
+      "comment": "Submenta o formulário do Item",
+      "command": "click",
+      "target": "id=calculardesconto.button.calcular",
+      "targets": [
+        ["id=calculardesconto.button.calcular", "id"],
+        ["css=#calculardesconto\\.button\\.calcular", "css:finder"],
+        ["xpath=//button[@id='calculardesconto.button.calcular']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Calcular Desconto!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e7afd82-5d0b-4bc9-949c-49c086f4d0fc",
+      "comment": "Verifique que o fator de desconto é 0.90 (10% de desconto)",
+      "command": "assertText",
+      "target": "css=.panel-body > p:nth-child(3)",
+      "targets": [
+        ["css=.panel-body > p:nth-child(3)", "css:finder"],
+        ["xpath=//p[3]", "xpath:position"],
+        ["xpath=//p[contains(.,'Fator obtido: 0.9 (ou seja, 10% de desconto)')]", "xpath:innerText"]
+      ],
+      "value": "Fator obtido: 0.9 (ou seja, 10% de desconto)"
+    }]
+  }],
+  "suites": [{
+    "id": "484448e5-1555-4b3f-93df-4c9579698f5d",
+    "name": "Cliente C",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["10475aa8-c822-4548-b6ba-0ade92d00491"]
+  }],
+  "urls": ["http://calculadora.diegoquirino.net/"],
+  "plugins": []
+}

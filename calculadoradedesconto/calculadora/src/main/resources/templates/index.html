@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Calculadora de Descontos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" th:href="@{/css/calculadora.css}" />
+</head>
+<body>
+    <header th:include="fragments :: header"></header>
+    <section class="container">
+        <div th:include="fragments :: jumbotron" class="jumbotron"></div>
+        <div class="all_cards">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Simulação</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Já sabe qual o seu perfil de cliente e deseja fazer a sua simulação de desconto?
+                        <a th:href="@{/produtos}">Clique aqui</a> e faça sua simulação agora mesmo!</p>
+                </div>
+                <div class="card-footer text-muted">
+                    <a th:href="@{/produtos}" class="btn btn-primary">Calcular Desconto</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Ajuda</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Você ainda tem dúvidas de como calcular sua simulação de desconto?
+                        <a th:href="@{/ajuda}">Clique aqui</a> agora mesmo e leia o conteúdo exclusivo que preparamos para você!</p>
+                </div>
+                <div class="card-footer text-muted">
+                    <a th:href="@{/ajuda}" class="btn btn-primary">FAQ</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Contato</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Dúvidas, sugestões e críticas?
+                        <a th:href="@{/contato}">Clique aqui</a> e nos mantenha informados agora mesmo!</p>
+                </div>
+                <div class="card-footer text-muted">
+                    <a th:href="@{/contato}" class="btn btn-primary">Contato</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer th:include="fragments :: footer"></footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

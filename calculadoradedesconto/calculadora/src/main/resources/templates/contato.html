@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Calculadora de Descontos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" th:href="@{/css/calculadora.css}" />
+</head>
+<body>
+    <header th:include="fragments :: header"></header>
+    <section class="container">
+        <div th:include="fragments :: jumbotron" class="jumbotron"></div>
+        <div th:replace="fragments :: alert (${type}, ${message})"></div>
+        <h1>Contato</h1>
+        <h4><small>Preencha as informações abaixo, e deixe-nos saber quais são as suas dúvidas!</small></h4>
+        <div class="card mt-4 mb-4">
+            <div class="card-body">
+                <form action="/contato" method="post">
+                    <div class="form-group">
+                        <label class="font-weight-bold" for="nome">Nome:</label>
+                        <input class="form-control" type="text" id="nome" />
+                        <small class="form-text text-muted">Informe o seu nome completo.</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold" for="email">Email:</label>
+                        <input class="form-control" type="email" id="email" />
+                        <small class="form-text text-muted">Nós nunca compartilhamos o seu email com ninguém.</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="mr-3">Tipo de Mensagem: </label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tipo" id="tipo_duvida" value="duvida" checked>
+                            <label class="form-check-label" for="tipo_duvida">Dúvida</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tipo" id="tipo_sugestao" value="sugestao">
+                            <label class="form-check-label" for="tipo_sugestao">Sugestão</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tipo" id="tipo_reclamacao" value="reclamacao">
+                            <label class="form-check-label" for="tipo_reclamacao">Reclamação</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold" for="idade">Idade:</label>
+                        <select class="form-control" id="idade">
+                            <option value="menor">Menor que 18 anos</option>
+                            <option value="jovem">Entre 18 e 29 anos</option>
+                            <option value="adulto">Entre 30 e 64 anos</option>
+                            <option value="idoso">A partir de 65 anos</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold" for="mensagem">Escreva aqui sua mensagem</label>
+                        <textarea class="form-control" name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+                        <small class="form-text text-muted">Sua mensagem deve ter no máximo 1000 caracteres.</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar sua mensagem</button>
+                    <button type="reset" class="btn btn-warning">Limpar</button>
+                    <a type="button" class="btn btn-secondary" th:href="@{/}">Cancelar</a>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer th:include="fragments :: footer"></footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

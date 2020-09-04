@@ -1,0 +1,48 @@
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    flex: 1;
+    padding-bottom: 60px;
+}
+
+footer {
+    background-color: lightgray;
+    text-align: center;
+    padding: 10px;
+
+    display: flex;
+    align-items: center; /* Vertical */
+    justify-content: center; /* Horizontal */
+}
+
+.all_cards {
+    display: flex;
+    align-items: stretch; /* Vertical */
+    justify-content: space-between; /* Horizontal */
+}
+
+.all_cards > div {
+    width: 32%;
+}
+
+.all_cards > div > div.card-header {
+    text-align: center;
+}
+
+.all_cards > div > div.card-footer {
+    display: flex;
+    align-items: stretch; /* Vertical */
+    justify-content: center; /* Horizontal */
+}
+
+.entity_list > div > div.card-header {
+    text-align: right;
+}
+
+label {
+    font-weight: bold;
+}

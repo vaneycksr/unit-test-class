@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <!-- Caixa de Alerta -->
+    <div th:fragment="alert (type, message)"
+         th:if="${!#strings.isEmpty(type) and !#strings.isEmpty(message)}"
+         class="alert alert-dismissable" th:classappend="'alert-' + ${type}" >
+         <!--th:assert="${!#strings.isEmpty(type) and !#strings.isEmpty(message)}"-->
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <span th:text="${message}"></span>
+    </div>
+
+    <!-- Barra de Navegação Global -->
+    <header th:fragment="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Calculadora de Descontos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav justify-content-end">
+                    <li class="nav-item" th:classappend="${classActiveIndex}">
+                        <a class="nav-link" th:href="@{/}">Página Inicial</a>
+                    </li>
+                    <li class="nav-item" th:classappend="${classActiveCalcularDesconto}">
+                        <a class="nav-link" th:href="@{/produtos}">Calcular Desconto</a>
+                    </li>
+                    <li class="nav-item" th:classappend="${classActiveAjuda}">
+                        <a class="nav-link" th:href="@{/ajuda}">Ajuda (FAQ)</a>
+                    </li>
+                    <li class="nav-item" th:classappend="${classActiveContato}">
+                        <a class="nav-link" th:href="@{/contato}">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Jumbotrom -->
+    <div th:fragment="jumbotron" >
+        <h1 class="display-4">Calculadora de Descontos</h1>
+        <p class="lead">Simule seus descontos para os seus produtos de acordo com o perfil de cliente e a quantidade de itens que serão comprados!</p>
+        <!--
+        <hr class="my-4">
+        <p>Nunca acessou o sistema, está perdido, leia a nossa seção de Ajuda (FAQ)</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Ajuda (FAQ)</a>
+        -->
+    </div>
+
+    <!-- Rodapé -->
+    <footer th:fragment="footer">
+        <small class="text-muted">&copy; 2020 Calculadora de Descontos</small>
+    </footer>
+</body>
+</html>
