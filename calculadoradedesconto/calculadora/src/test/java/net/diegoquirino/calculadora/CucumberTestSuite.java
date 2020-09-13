@@ -7,9 +7,9 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         plugin = {"pretty","html:target/html-report","json:target/cucumber.json"},
-        glue = "net.diegoquirino.calculadora.ux.passos.req001",
+        glue = "net.diegoquirino.calculadora.ux.passos.req003",
         features = "src/test/resources/features",
-        tags = "@req001"
+        tags = "@req003"
 )
 public class CucumberTestSuite {
 }

@@ -1,7 +1,6 @@
 # language: pt
 
   @all @req003 @sucesso @fb
-
   Funcionalidade: REQ003 - Formulário de Contato
 
     Esquema do Cenario: Enviar contato com sucesso (fluxo básico)

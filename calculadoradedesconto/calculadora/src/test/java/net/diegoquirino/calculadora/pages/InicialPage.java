@@ -13,9 +13,16 @@ public class InicialPage extends MyPageObject {
     WebElement botaoAjuda;
     @FindBy(id=Locators.ID_BTNCONTATO)
     WebElement botaoContato;
+    @FindBy(xpath = Locators.XPATH_PRODUCT_NAME)
+    WebElement botaoProduto;
+
 
     public void acessarCalculoDesconto() {
         clicar(botaoCalcularDesconto);
+    }
+
+    public void acessarProduto() {
+        clicar(botaoProduto);
     }
 
     public void acessarAjuda() {

@@ -47,4 +47,11 @@ public class Req003Steps {
                 page.getToastMsg(),
                 is("Mensagem enviada com sucesso!"));
     }
+
+    @Step
+    public void verificar_mensagem_erro() {
+        assertThat(
+                page.getToastMsg(),
+                is("Sua mensagem não pôde ser enviada no momento! Tente mais tarde."));
+    }
 }

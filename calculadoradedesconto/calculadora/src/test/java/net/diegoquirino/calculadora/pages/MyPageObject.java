@@ -26,6 +26,7 @@ public class MyPageObject extends PageObject {
         return element.getText();
     }
 
+
     public void submeterFormulario(WebElement element) {
         verificarPresenca(element);
         element.submit();
